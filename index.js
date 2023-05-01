@@ -76,7 +76,7 @@ const prefixes = [
         return date;
     };
 
-    var prefixesParser = function (data) {
+    var prefixesParser = function(data) {
         var regExStr = '';
         var prefixIdxs = [];
         for (var i = 0; i < prefixes.length; i++) {
@@ -347,32 +347,16 @@ const prefixes = [
                 );
                 break;
             }
+            case 4: {
+                parseRegex = prefixesParser(data);
+                break;
+            }
+            case 5: {
+                parseRegex = prefixesParser(data);
+                break;
+            }
             case 6: {
-                parseRegex = new RegExp(
-                    '(DAQ.*?)?' +
-                    '(DCS.*?)?' +
-                    '(DDE.*?)?' +
-                    '(DAC.*?)?' +
-                    '(DDF.*?)?' +
-                    '(DAD.*?)?' +
-                    '(DDG.*?)?' +
-                    '(DCA.*?)?' +
-                    '(DCB.*?)?' +
-                    '(DCD.*?)?' +
-                    '(DBD.*?)?' +
-                    '(DBB.*?)?' +
-                    '(DBA.*?)?' +
-                    '(DBC.*?)?' +
-                    '(DAU.*?)?' +
-                    '(DAY.*?)?' +
-                    '(DAG.*?)?' +
-                    '(DAI.*?)?' +
-                    '(DAJ.*?)?' +
-                    '(DAK.*?)?' +
-                    '(DCF.*?)?' +
-                    /* optional */
-                    '$'
-                );
+                parseRegex = prefixesParser(data);
                 break;
             }
             /* version 07 year 2012 */
